@@ -1,14 +1,37 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+datasource db {
+  provider = "mysql" // Vamos a usar MYSQL para el proyecto
+  url      = env("DATABASE_URL") // En git no existe el archivo .env ya que se esta ignorando, instalarlo local
+}
 
 generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  role      String   // Agregar el campo de rol
+  nombre    String   // Agregar el campo de nombre
 }
+
+
+model Calendario {
+  id     Int    @id @default(autoincrement())
+  fecha  DateTime
+  hora   String
+  estado String // 'reservado' o 'libre'
+}
+
+model Cita {
+  id             Int      @id @default(autoincrement())
+  email          String
+  fecha          DateTime
+  hora           String
+  descripcion    String
+  estado         String   // 'pendiente', 'confirmada', etc.
+  doctorAsignado String   @default("Pendiente de asignar")
+  nombre         String   
+  revision         String    @default("Pendiente de revision")
+}
+
