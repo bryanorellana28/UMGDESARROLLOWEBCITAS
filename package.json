@@ -13,7 +13,7 @@
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
-    "next": "15.0.1",
+    "next": "^15.0.3",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
     "react-svg": "^16.1.34"
@@ -21,8 +21,8 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.7",
-    "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
@@ -30,6 +30,6 @@
     "postcss": "^8.4.47",
     "prisma": "^5.21.1",
     "tailwindcss": "^3.4.14",
-    "typescript": "^5"
+    "typescript": "^5.6.3"
   }
 }
