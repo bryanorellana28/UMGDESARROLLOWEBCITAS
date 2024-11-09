@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto Final UMG Desarrollo WEB
 
-## Getting Started
+Este es un proyecto de gestión de citas médicas desarrollado con [Next.js](https://nextjs.org), iniciado con [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-First, run the development server:
+## Tecnologías Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### **Frontend**
+- Next.js
+- React.js (TypeScript)
+- Tailwind CSS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Backend**
+- API Routes de Next.js
+- MySQL 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **Autenticación**
+- JWT para autenticación de usuarios
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **ORM**
+- Prisma o TypeORM para interacción con bases de datos
 
-## Learn More
+## Funcionalidades Principales
 
-To learn more about Next.js, take a look at the following resources:
+1. **Gestión de Citas**
+   - Reserva de citas según disponibilidad de fechas y horarios.
+   - Confirmación y recordatorios automáticos por correo.
+   - Posibilidad de cancelar o reprogramar citas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Calendario y Disponibilidad**
+   - Administración de horarios por parte de médicos o agentes de viaje.
+   - Vista de calendario con citas semanales/mensuales.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Autenticación y Roles**
+   - Autenticación de usuarios con JWT.
+   - Roles de usuario: Administrador, Médico, Paciente.
 
-## Deploy on Vercel
+4. **Dashboard para Administración**
+   - Visualización de todas las citas.
+   - Reportes de citas programadas y canceladas.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Configuración del Entorno
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+
+```env
+DATABASE_URL="mysql://usuario:contraseña@localhost:3306/bd"
+JWT_SECRET="secreto"
