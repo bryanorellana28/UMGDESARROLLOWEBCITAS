@@ -1,7 +1,6 @@
 # Proyecto Final UMG Desarrollo WEB
 
-Este es un proyecto de gestión de citas médicas desarrollado con [Next.js](https://nextjs.org), iniciado con [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+Este es un proyecto de gestión de citas médicas desarrollado con [Next.js](https://nextjs.org).
 ## Tecnologías Utilizadas
 
 ### **Frontend**
@@ -17,7 +16,7 @@ Este es un proyecto de gestión de citas médicas desarrollado con [Next.js](htt
 - JWT para autenticación de usuarios
 
 ### **ORM**
-- Prisma o TypeORM para interacción con bases de datos
+- Prisma  para interacción con bases de datos
 
 ## Funcionalidades Principales
 
@@ -38,6 +37,17 @@ Este es un proyecto de gestión de citas médicas desarrollado con [Next.js](htt
    - Visualización de todas las citas.
    - Reportes de citas programadas y canceladas.
 
+
+
+## Para migrar la base de datos con Prisma:
+
+npx prisma migrate dev --name init
+
+## Iniciar el servidor en un ambiente de pruebas.
+
+npm run dev
+
+
 ## Configuración del Entorno
 
 Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
@@ -45,3 +55,6 @@ Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
 ```env
 DATABASE_URL="mysql://usuario:contraseña@localhost:3306/bd"
 JWT_SECRET="secreto"
+
+
+npx prisma migrate dev --name init
